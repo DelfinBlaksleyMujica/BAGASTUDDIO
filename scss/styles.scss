@@ -1,0 +1,138 @@
+@import "variables";
+@import "grids";
+@import "containers";
+@import "margenes";
+@import "titulos";
+@import "parrafos";
+@import "botones";
+@import "imagenes";
+@import "videos";
+@import "pseudoClases";
+@import "mediaQuaries";
+
+
+//Para achicar ele spacio que ocupaba el grid ya desaparecido cuando se abre el video 100%
+.noMargin {
+    margin:0;
+}
+
+
+
+.altura__imagenesCarrousel__shortfilms{
+    height:400px;
+}
+
+.IndexexistoSoloParaMobile{
+    display:none;
+}
+
+
+
+@media (max-width:768px) {
+    .cuerpo{
+        display: grid; 
+        grid-auto-columns: 1fr; 
+        grid-auto-rows: 0.5fr; 
+        grid-template-columns: 1fr; 
+        grid-template-rows: 1fr; 
+        gap: 0px 0px; 
+        grid-template-areas: 
+            "index__logoMobile__container"; 
+    }
+    #navBar__index{
+        display:none;
+    }
+    .carrousel__index__desaparecerMobile{
+        display:none;
+    }
+    .IndexexistoSoloParaMobile{
+        display:flex;
+        flex-direction: column;
+        color: white;
+    }
+#index__container__general img{
+    display:none;
+}
+
+    .index__logoMobile__container{
+        width: 100%;
+        height:200px;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
+    .index__logoMobile__container{
+        width: 100%;
+        height:200px;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
+    .index__logoMobile__container h1{
+        font-family: $tipografiaTitulosDeSeccion;
+        font-size: $tFuenteTitulosDeSeccionTablet;
+        color: white;
+    }
+    .index__mainMobile__container{
+        grid-area: index__mainMobile__container;
+        width:100%;
+        display: flex;
+        justify-content:center;
+        align-items:center;
+    }
+    .index__mainMobile__container div {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    align-items: baseline;
+    }
+    .index__mainMobile__container div a{
+        text-decoration: none;
+    }
+    hr{
+        width:100%;
+        color:white;
+    }
+    .index__mainMobile__container div a p{
+       font-family:$tipografiaInfoCards;
+       font-size: $tFuenteInfoCardsClipsTablet;
+    }
+    .index__btnMobile__container{
+        width: 100%;
+        display: flex;
+        justify-content:center;
+        align-items:center;
+        padding-top: 100px;
+        grid-area: index__btnMobile__container;
+    }
+    .logo__instagramIndex__mobile{
+        display:block;
+    }
+
+
+}
+
+
+.fondoNegro__body{
+    background-color: black;
+}
+
+
+@media (max-width:400px) {
+    .logo__insatagram__navbar{
+        display:none;
+    }
+}
+
+@media (max-width:1024px) {
+    #index__imagenCarrousel__container div h5 {
+        font-size: 2.8rem;
+    }
+
+    #index__imagenCarrousel__container div {
+        right: 29%;
+    }
+}
